@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-slate-950: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-50 bg-[#0f172a];
+    font-feature-settings: 'ss01', 'ss02', 'cv01', 'cv11';
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-slate-900/60 border border-white/5 rounded-[40px] backdrop-blur-xl transition-all duration-500 hover:border-red-900/40;
+  }
+  
+  .accent-gradient {
+    background: linear-gradient(135deg, #8B0000 0%, #191970 50%, #FF1493 100%);
+  }
+}
+
+/* Custom Scrollbar for dark theme */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
