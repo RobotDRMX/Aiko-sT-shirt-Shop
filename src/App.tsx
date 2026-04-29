@@ -120,61 +120,61 @@ const I18N = {
     catalog: 'Catálogo',
     about: 'Nosotros',
     contact: 'Contacto',
-    exhibit: 'EXHIBICIÓN',
-    heroSub: 'Excelencia Curada',
-    heroTitle: 'Exhibición de <span class="text-red-600 font-light italic">Jerseys</span>',
-    heroDesc: 'Descubre Aiko\'s T-Shirt Shop. Calidad premium y diseños icónicos del fútbol mundial seleccionados para ti.',
-    shipping: 'Envíos Rápidos en todo México',
-    selectionSize: 'Selección: Talla (Pecho)',
-    selectionTone: 'Versión / Tono',
-    addToBag: 'Añadir a la Bolsa',
-    backGrid: 'Volver al Catálogo',
-    inventory: 'Inventario',
-    emptyCart: 'Tu inventario está vacío',
-    browse: 'Empezar a buscar',
-    totalBill: 'Total del Pedido',
+    exhibit: 'COLECCIÓN PRO',
+    heroSub: 'Disciplina. Pasión. Gloria.',
+    heroTitle: 'EQUIPAMIENTO DE <span class="gold-text-gradient font-black">ÉLITE</span>',
+    heroDesc: 'Descubre Sportiva Total MX. Rendimiento superior y diseños icónicos del fútbol mundial forjados en oro.',
+    shipping: 'ENVIOS A TODO MÉXICO',
+    selectionSize: 'SELECCIÓN: TALLA PROFESIONAL',
+    selectionTone: 'VERSIÓN / ACABADO',
+    addToBag: 'Adquirir Ahora',
+    backGrid: 'Volver a la Galería',
+    inventory: 'TU SELECCIÓN',
+    emptyCart: 'No has seleccionado equipamiento',
+    browse: 'Explorar Galería',
+    totalBill: 'Inversión Total',
     finalize: 'Finalizar Pedido',
     secure: 'Seguro',
-    logistic: 'Logística',
-    fast: 'Entrega en TODO México',
-    sustainable: 'Calidad Premium',
-    identityName: 'Nombre Completo',
-    phone: 'Número de Contacto (+)',
-    address: 'Dirección de Entrega',
-    online: 'Vendedores en Línea',
-    disclaimer: 'El pedido se coordina vía WhatsApp. Entregas garantizadas en todo México.',
-    items: 'Artículos',
-    orderMsg: 'NUEVO PEDIDO DE JERSEY',
+    logistic: 'Logística Pro',
+    fast: 'Logística en todo México',
+    sustainable: 'Calidad Premium Elite',
+    identityName: 'Nombre del Atleta / Cliente',
+    phone: 'Contacto WhatsApp (+)',
+    address: 'Dirección de Entrega Estratégica',
+    online: 'Asistencia en Tiempo Real',
+    disclaimer: 'Gestión exclusiva vía WhatsApp. Entregas tácticas en todo México.',
+    items: 'Unidades',
+    orderMsg: 'NUEVA ORDEN DE EQUIPAMIENTO ELITE - SPORTIVA TOTAL MX',
   },
   en: {
     catalog: 'Catalog',
-    about: 'About',
+    about: 'Our Story',
     contact: 'Contact',
-    exhibit: 'EXHIBIT',
-    heroSub: 'Curated Excellence',
-    heroTitle: 'Jersey <span class="text-red-600 font-light italic">Exhibition</span>',
-    heroDesc: 'Discover Aiko\'s T-Shirt Shop. Premium quality and iconic football designs curated for you.',
-    shipping: 'Fast Mexico-Wide Shipping',
-    selectionSize: 'Selection: Size (Chest)',
-    selectionTone: 'Version / tone',
-    addToBag: 'Add to Bag',
-    backGrid: 'Back to Catalog',
-    inventory: 'Inventory',
-    emptyCart: 'Your inventory is empty',
-    browse: 'Start Browsing',
-    totalBill: 'Total Bill',
+    exhibit: 'PRO COLLECTION',
+    heroSub: 'Discipline. Passion. Glory.',
+    heroTitle: 'ELITE <span class="gold-text-gradient font-black">GEAR</span> EXHIBIT',
+    heroDesc: 'Discover Sportiva Total MX. Superior performance and iconic world football designs curated for you.',
+    shipping: 'FAST MEXICO-WIDE LOGISTICS',
+    selectionSize: 'SELECTION: PRO SIZE (CHEST)',
+    selectionTone: 'VERSION / FINISH',
+    addToBag: 'Acquire Now',
+    backGrid: 'Back to Gallery',
+    inventory: 'YOUR SELECTION',
+    emptyCart: 'No gear selected yet',
+    browse: 'Browse Gallery',
+    totalBill: 'Total Investment',
     finalize: 'Finalize Order',
     secure: 'Secure',
-    logistic: 'Logistics',
-    fast: 'Mexico-Wide Delivery',
-    sustainable: 'Premium Quality',
-    identityName: 'Full Identity Name',
-    phone: 'Contact Number (+)',
-    address: 'Delivery Address & Notes',
-    online: 'Operators Online',
-    disclaimer: 'Orders are processed via WhatsApp. Guaranteed delivery in all Mexico.',
-    items: 'Items',
-    orderMsg: 'NEW JERSEY ORDER',
+    logistic: 'Pro Logistics',
+    fast: 'Mexico-Wide Logistics',
+    sustainable: 'Elite Premium Quality',
+    identityName: 'Athlete / Client Name',
+    phone: 'WhatsApp Contact (+)',
+    address: 'Strategic Delivery Address',
+    online: 'Real-time Assistance',
+    disclaimer: 'Exclusive management via WhatsApp. Tactical deliveries across Mexico.',
+    items: 'Units',
+    orderMsg: 'NEW ELITE GEAR ORDER - SPORTIVA TOTAL MX',
   }
 };
 
@@ -223,33 +223,36 @@ export default function App() {
 
   const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-  const bgClass = theme === 'dark' ? 'bg-slate-950 text-slate-50' : 'bg-slate-50 text-slate-950';
-  const cardClass = theme === 'dark' ? 'bg-slate-900/40 border-white/5' : 'bg-white border-slate-200 shadow-sm';
+  const bgClass = theme === 'dark' ? 'bg-[#0A0A0A] text-[#F5F5F5]' : 'bg-[#F2F2F2] text-[#0A0A0A]';
+  const cardClass = theme === 'dark' ? 'bento-card' : 'bento-card bg-white border-slate-200 shadow-sm';
 
   return (
     <div className={`min-h-screen font-sans ${bgClass} overflow-x-hidden pt-24 pb-12 transition-colors duration-500`}>
       {/* Header */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b transition-colors ${theme === 'dark' ? 'bg-slate-950/80 border-white/5' : 'bg-white/80 border-slate-200'}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b transition-colors ${theme === 'dark' ? 'bg-[#0A0A0A]/80 border-white/5' : 'bg-white/80 border-slate-200'}`}>
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <button onClick={() => setView('catalog')} className="flex items-center gap-3">
-            <div className="w-10 h-10 accent-gradient rounded-xl flex items-center justify-center font-black text-white italic shadow-lg overflow-hidden">
-              <ShoppingBag className="w-6 h-6 border-b-2 border-white/20 pb-0.5" />
+          <button onClick={() => setView('catalog')} className="flex items-center gap-4 group">
+            <div className="w-12 h-12 gold-fill rounded-xl flex items-center justify-center shadow-lg transition-transform group-hover:scale-105 overflow-hidden">
+              <img src="/src/assets/logo.png" alt="Logo" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-xl font-black tracking-tighter uppercase font-display">
-              AIKO'S <span className="text-red-600 font-light italic">T-SHIRT SHOP</span>
-            </h1>
+            <div className="text-left">
+              <h1 className="text-lg font-black tracking-tighter uppercase font-display leading-none">
+                SPORTIVA <span className="gold-text-gradient italic">TOTAL MX</span>
+              </h1>
+              <p className="text-[8px] font-bold tracking-[0.3em] text-slate-500 uppercase mt-1 leading-none">{t.heroSub}</p>
+            </div>
           </button>
 
           <div className="flex items-center gap-3">
-            <button onClick={() => setLang(lang === 'es' ? 'en' : 'es')} className="p-2 hover:bg-indigo-500/10 rounded-xl transition flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-indigo-500">
+            <button onClick={() => setLang(lang === 'es' ? 'en' : 'es')} className="p-2 hover:bg-[#D4AF37]/10 rounded-xl transition flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#D4AF37]">
               <Globe className="w-4 h-4" /> {lang.toUpperCase()}
             </button>
             <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 hover:bg-slate-500/10 rounded-xl transition">
-              {theme === 'dark' ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-indigo-500" />}
+              {theme === 'dark' ? <Sun className="w-5 h-5 text-[#D4AF37]" /> : <Moon className="w-5 h-5 text-[#191970]" />}
             </button>
-            <button onClick={() => setView('summary')} className="relative p-3 bg-indigo-500/5 border border-indigo-500/10 rounded-xl">
-              <ShoppingBag className="w-5 h-5 text-indigo-500" />
-              {cart.length > 0 && <span className="absolute -top-1 -right-1 w-5 h-5 accent-gradient rounded-full text-[10px] font-black flex items-center justify-center shadow-lg">{cart.length}</span>}
+            <button onClick={() => setView('summary')} className="relative p-3 bg-[#D4AF37]/5 border border-[#D4AF37]/20 rounded-xl transition-all hover:bg-[#D4AF37]/10">
+              <ShoppingBag className="w-5 h-5 text-[#D4AF37]" />
+              {cart.length > 0 && <span className="absolute -top-1 -right-1 w-5 h-5 gold-fill rounded-full text-[10px] font-black flex items-center justify-center shadow-lg border-2 border-[#0A0A0A]">{cart.length}</span>}
             </button>
           </div>
         </div>
@@ -258,31 +261,48 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-6">
         <AnimatePresence mode="wait">
           {view === 'catalog' && (
-            <motion.div key="catalog" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-10">
-              <div className={`flex flex-col md:flex-row md:items-end justify-between gap-6 p-10 rounded-[3rem] border transition-colors ${cardClass}`}>
-                <div className="max-w-xl">
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-500 mb-4 block italic">{t.heroSub}</span>
-                  <h2 className="text-5xl md:text-6xl font-black uppercase font-display leading-[0.9] tracking-tighter mb-6" dangerouslySetInnerHTML={{ __html: t.heroTitle }} />
-                  <p className="text-slate-400 text-lg font-medium leading-relaxed">{t.heroDesc}</p>
-                  <div className="mt-8 flex items-center gap-2 bg-emerald-500/10 text-emerald-500 px-4 py-2 rounded-2xl border border-emerald-500/20 w-fit">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">{t.shipping}</span>
+            <motion.div key="catalog" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-10">
+              <div className={`flex flex-col md:flex-row md:items-center justify-between gap-8 p-12 rounded-[3.5rem] border transition-all ${cardClass} relative overflow-hidden`}>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/5 blur-[100px] rounded-full -z-10" />
+                <div className="max-w-2xl">
+                  <span className="text-[11px] font-black uppercase tracking-[0.5em] text-[#D4AF37] mb-6 block italic">{t.heroSub}</span>
+                  <h2 className="text-6xl md:text-7xl font-black uppercase font-display leading-[0.85] tracking-tighter mb-8" dangerouslySetInnerHTML={{ __html: t.heroTitle }} />
+                  <p className="text-[#B0B0B0] text-xl font-medium leading-relaxed max-w-lg">{t.heroDesc}</p>
+                  <div className="mt-10 flex flex-wrap gap-4">
+                    <div className="flex items-center gap-3 bg-[#0F3D2E]/20 text-[#22c55e] px-6 py-3 rounded-2xl border border-[#0F3D2E]/40 w-fit">
+                      <Truck className="w-5 h-5" />
+                      <span className="text-[11px] font-black uppercase tracking-widest">{t.shipping}</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-[#5A1A1A]/20 text-[#ef4444] px-6 py-3 rounded-2xl border border-[#5A1A1A]/40 w-fit">
+                      <ShieldCheck className="w-5 h-5" />
+                      <span className="text-[11px] font-black uppercase tracking-widest">{t.sustainable}</span>
+                    </div>
                   </div>
+                </div>
+                <div className="hidden lg:block w-72 h-72 border border-[#D4AF37]/20 rounded-full flex items-center justify-center relative">
+                   <div className="w-64 h-64 border border-[#D4AF37]/40 rounded-full flex items-center justify-center">
+                      <div className="w-56 h-56 gold-fill rounded-full flex items-center justify-center opacity-10 animate-pulse" />
+                   </div>
+                   <div className="absolute inset-0 flex items-center justify-center">
+                      <Star className="w-16 h-16 text-[#D4AF37] blur-sm animate-pulse" />
+                   </div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {PRODUCTS.map(p => (
-                  <motion.div key={p.id} whileHover={{ y: -8 }} onClick={() => { setSelectedProduct(p); setView('details'); }} className={`rounded-[2.5rem] border overflow-hidden cursor-pointer group transition-all ${cardClass}`}>
-                    <div className="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                      <img src={p.images[0]} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90" referrerPolicy="no-referrer" />
-                      <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-slate-950 via-transparent flex justify-between items-end">
+                  <motion.div key={p.id} whileHover={{ y: -12 }} onClick={() => { setSelectedProduct(p); setView('details'); }} className={`rounded-[3rem] border overflow-hidden cursor-pointer group transition-all duration-500 ${cardClass}`}>
+                    <div className="aspect-[4/5] relative overflow-hidden bg-[#1A1A1A]">
+                      <img src={p.images[0]} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100" referrerPolicy="no-referrer" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-80" />
+                      <div className="absolute inset-x-0 bottom-0 p-10 flex justify-between items-end">
                         <div>
-                          <p className="text-lg font-black uppercase tracking-tighter leading-none mb-1 text-white">{p.name[lang]}</p>
-                          <p className="text-indigo-400 font-bold text-sm tracking-widest uppercase italic">${p.price}</p>
+                          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#D4AF37] mb-2">{t.exhibit}</p>
+                          <h4 className="text-2xl font-black uppercase tracking-tighter leading-none mb-1 text-[#F5F5F5]">{p.name[lang]}</h4>
+                          <p className="text-[#B0B0B0] font-bold text-lg tracking-tight italic mt-2">${p.price}</p>
                         </div>
-                        <div className="w-12 h-12 accent-gradient rounded-2xl flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform">
-                          <Plus className="w-6 h-6" />
+                        <div className="w-14 h-14 gold-fill rounded-2xl flex items-center justify-center text-[#0A0A0A] scale-75 group-hover:scale-100 transition-all shadow-2xl">
+                          <Plus className="w-8 h-8" />
                         </div>
                       </div>
                     </div>
@@ -293,94 +313,101 @@ export default function App() {
           )}
 
           {view === 'details' && selectedProduct && (
-            <motion.div key="details" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <motion.div key="details" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-6">
               <div className="col-span-12">
-                <button onClick={() => setView('catalog')} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition">
-                  <ArrowLeft className="w-4 h-4" /> {t.backGrid}
+                <button onClick={() => setView('catalog')} className="flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.4em] text-slate-500 hover:text-[#D4AF37] transition-all group">
+                  <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-2" /> {t.backGrid}
                 </button>
               </div>
 
-              <div className={`col-span-12 lg:col-span-7 rounded-[3rem] border overflow-hidden relative ${cardClass} aspect-[4/5]`}>
+              <div className={`col-span-12 lg:col-span-7 rounded-[4rem] border overflow-hidden relative ${cardClass} aspect-[4/5] lg:aspect-auto`}>
                 <AnimatePresence mode="wait">
-                  <motion.img key={currentImageIndex} src={selectedProduct.images[currentImageIndex]} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full h-full object-cover" />
+                  <motion.img key={currentImageIndex} src={selectedProduct.images[currentImageIndex]} initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} transition={{ duration: 0.6 }} className="w-full h-full object-cover" />
                 </AnimatePresence>
-                <div className="absolute inset-x-8 bottom-8 flex gap-3">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/20 to-[#0A0A0A]/80 pointer-events-none" />
+                <div className="absolute bottom-10 left-10 flex gap-4">
                   {selectedProduct.images.map((img, idx) => (
-                    <button key={idx} onClick={() => setCurrentImageIndex(idx)} className={`w-16 h-16 rounded-2xl border-2 transition-all ${idx === currentImageIndex ? 'border-indigo-500 scale-110 shadow-lg shadow-indigo-500/20' : 'border-white/10 opacity-50 hover:opacity-100'}`}>
+                    <button key={idx} onClick={() => setCurrentImageIndex(idx)} className={`w-20 h-20 rounded-2xl border-2 overflow-hidden transition-all duration-500 ${idx === currentImageIndex ? 'border-[#D4AF37] scale-110 shadow-2xl shadow-[#D4AF37]/30' : 'border-white/10 opacity-40 hover:opacity-100'}`}>
                       <img src={img} className="w-full h-full object-cover rounded-xl" />
                     </button>
                   ))}
                 </div>
               </div>
 
-              <div className={`col-span-12 lg:col-span-5 rounded-[3rem] border p-10 flex flex-col justify-between ${cardClass}`}>
-                <div className="space-y-6">
-                  <h3 className="text-4xl font-black uppercase leading-tight font-display tracking-tighter">{selectedProduct.name[lang]}</h3>
-                  <p className="text-3xl font-light text-indigo-500 italic">${selectedProduct.price}</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">{selectedProduct.description[lang]}</p>
+              <div className={`col-span-12 lg:col-span-5 rounded-[4rem] border p-12 lg:p-16 flex flex-col justify-between ${cardClass}`}>
+                <div className="space-y-10">
+                  <div className="space-y-4">
+                    <span className="text-[11px] font-black uppercase tracking-[0.5em] text-[#D4AF37] italic">{t.heroSub}</span>
+                    <h3 className="text-5xl lg:text-6xl font-black uppercase leading-[0.9] font-display tracking-tighter">{selectedProduct.name[lang]}</h3>
+                    <p className="text-4xl font-light gold-text-gradient animate-pulse italic mt-6 tracking-tighter">${selectedProduct.price}</p>
+                  </div>
                   
-                  <div className="bg-indigo-500/5 p-4 rounded-2xl border border-indigo-500/10 flex items-center gap-3">
-                    <Info className="w-5 h-5 text-indigo-500" />
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-indigo-400">{t.shipping}</p>
+                  <p className="text-[#B0B0B0] text-lg leading-relaxed font-medium">{selectedProduct.description[lang]}</p>
+                  
+                  <div className="flex flex-wrap gap-4">
+                    <div className="bg-[#0F3D2E]/20 px-4 py-2 rounded-xl border border-[#0F3D2E]/30 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-[#22c55e] rounded-full" />
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[#22c55e]">{t.shipping}</span>
+                    </div>
                   </div>
 
-                  <div className="space-y-8 mt-10">
+                  <div className="space-y-10 pt-6">
                     <div>
-                      <div className="flex justify-between items-center mb-4">
-                        <label className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-500 italic">{t.selectionSize}</label>
-                        <span className="text-[9px] font-black text-indigo-400 bg-indigo-400/10 px-2 py-0.5 rounded-full">{selectedSize.measures}</span>
+                      <div className="flex justify-between items-center mb-6">
+                        <label className="text-[11px] uppercase tracking-[0.4em] font-black text-slate-500 italic">{t.selectionSize}</label>
+                        <span className="text-[11px] font-black text-[#D4AF37] bg-[#D4AF37]/10 px-4 py-1.5 rounded-full border border-[#D4AF37]/20">{selectedSize.measures}</span>
                       </div>
-                      <div className="grid grid-cols-5 gap-2">
+                      <div className="grid grid-cols-5 gap-3">
                         {SIZE_CHART.map(s => (
-                          <button key={s.id} onClick={() => setSelectedSize(s)} className={`h-12 rounded-xl border font-black text-xs transition-all ${selectedSize.id === s.id ? 'accent-gradient border-transparent text-white shadow-xl shadow-indigo-500/30' : 'border-white/10 hover:bg-white/5'}`}>{s.label}</button>
+                          <button key={s.id} onClick={() => setSelectedSize(s)} className={`h-16 rounded-2xl border font-black text-[11px] tracking-widest transition-all duration-500 ${selectedSize.id === s.id ? 'gold-fill border-transparent text-[#0A0A0A] shadow-2xl' : 'border-white/10 hover:bg-white/5 text-slate-400'}`}>{s.label}</button>
                         ))}
                       </div>
                     </div>
                   </div>
                 </div>
-                <motion.button whileTap={{ scale: 0.95 }} onClick={addToCart} className="w-full h-20 rounded-[2.5rem] accent-gradient text-white font-black uppercase text-xs tracking-widest shadow-2xl transition-transform mt-12 flex items-center justify-center gap-3">
-                  <ShoppingCart className="w-5 h-5" /> {t.addToBag}
+                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={addToCart} className="w-full h-24 rounded-[3rem] gold-fill text-[#0A0A0A] font-black uppercase text-sm tracking-[0.3em] shadow-2xl transition-all mt-16 flex items-center justify-center gap-4">
+                  <ShoppingCart className="w-6 h-6" /> {t.addToBag}
                 </motion.button>
               </div>
             </motion.div>
           )}
 
           {view === 'summary' && (
-            <motion.div key="summary" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <motion.div key="summary" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               <div className="col-span-12">
-                <button onClick={() => setView('catalog')} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition">
-                  <ArrowLeft className="w-4 h-4" /> {t.backGrid}
+                <button onClick={() => setView('catalog')} className="flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.4em] text-slate-500 hover:text-white transition-all group">
+                   <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-2" /> {t.backGrid}
                 </button>
               </div>
 
-              <div className="col-span-12 lg:col-span-8 space-y-6">
-                <div className={`rounded-[3rem] border p-10 ${cardClass}`}>
-                  <h3 className="text-3xl font-black uppercase italic tracking-tighter mb-10 font-display">{t.inventory} <span className="text-indigo-500 font-light">MEX-JERSEY</span></h3>
+              <div className="col-span-12 lg:col-span-8 space-y-8">
+                <div className={`rounded-[4rem] border p-12 ${cardClass}`}>
+                  <h3 className="text-4xl font-black uppercase italic tracking-tighter mb-12 font-display">{t.inventory} <span className="gold-text-gradient font-light">LIMITED EDITION</span></h3>
                   
                   {cart.length === 0 ? (
-                    <div className="py-20 flex flex-col items-center justify-center opacity-20 gap-4">
-                      <ShoppingBag className="w-20 h-20" />
-                      <p className="text-[10px] font-black uppercase tracking-[0.4em]">{t.emptyCart}</p>
+                    <div className="py-24 flex flex-col items-center justify-center opacity-20 gap-8">
+                      <ShoppingBag className="w-32 h-32 stroke-[0.5px]" />
+                      <p className="text-[12px] font-black uppercase tracking-[0.6em]">{t.emptyCart}</p>
                     </div>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                       {cart.map((item, idx) => (
-                        <motion.div key={`${item.id}-${item.selectedSize}`} layout className="flex flex-col sm:flex-row items-center gap-6 p-6 bg-white/5 border border-white/5 rounded-[2.5rem]">
-                          <img src={item.images[0]} className="w-24 h-24 rounded-3xl object-cover border border-white/10" />
-                          <div className="flex-1 text-center sm:text-left">
-                            <h4 className="text-lg font-black uppercase tracking-tight mb-2">{item.name[lang]}</h4>
-                            <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-4">
-                              <span className="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-[9px] font-black uppercase rounded-full border border-indigo-400/20">{item.selectedSize} ({item.sizeMeasures})</span>
+                        <motion.div key={`${item.id}-${item.selectedSize}`} layout className="flex flex-col sm:flex-row items-center gap-8 p-8 bg-white/5 border border-white/5 rounded-[3.5rem] group hover:border-[#D4AF37]/20 transition-all duration-700">
+                          <img src={item.images[0]} className="w-32 h-32 rounded-[2.5rem] object-cover border border-white/10 group-hover:scale-105 transition-transform" />
+                          <div className="flex-1 text-center sm:text-left space-y-3">
+                            <h4 className="text-2xl font-black uppercase tracking-tight text-[#F5F5F5]">{item.name[lang]}</h4>
+                            <div className="flex flex-wrap justify-center sm:justify-start gap-3">
+                              <span className="px-4 py-1.5 bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] font-black uppercase rounded-full border border-[#D4AF37]/20">{item.selectedSize} — {item.sizeMeasures}</span>
                             </div>
-                            <p className="text-2xl font-black font-display tracking-tight">${item.price}</p>
+                            <p className="text-3xl font-black font-display tracking-tight text-white">${item.price}</p>
                           </div>
-                          <div className="flex flex-col items-center gap-2">
-                             <div className="flex items-center bg-slate-950 border border-white/10 rounded-2xl px-4 py-2">
-                               <button onClick={() => updateQty(idx, -1)} className="p-2 hover:text-indigo-400"><Minus className="w-4 h-4 text-white" /></button>
-                               <span className="w-10 text-center font-black font-display text-white">{item.quantity}</span>
-                               <button onClick={() => updateQty(idx, 1)} className="p-2 hover:text-indigo-400"><Plus className="w-4 h-4 text-white" /></button>
+                          <div className="flex flex-col items-center gap-4">
+                             <div className="flex items-center bg-[#0A0A0A] border border-white/10 rounded-3xl px-6 py-3">
+                               <button onClick={() => updateQty(idx, -1)} className="p-3 text-slate-500 hover:text-[#D4AF37] transition-colors"><Minus className="w-5 h-5" /></button>
+                               <span className="w-12 text-center text-xl font-black font-display text-white">{item.quantity}</span>
+                               <button onClick={() => updateQty(idx, 1)} className="p-3 text-slate-500 hover:text-[#D4AF37] transition-colors"><Plus className="w-5 h-5" /></button>
                              </div>
-                             <button onClick={() => removeFromCart(idx)} className="text-[9px] font-black uppercase tracking-widest text-red-500/40 hover:text-red-500">Eliminar</button>
+                             <button onClick={() => removeFromCart(idx)} className="text-[10px] font-black uppercase tracking-[0.4em] text-red-500/40 hover:text-red-500 transition-colors">REMOVE UNIT</button>
                           </div>
                         </motion.div>
                       ))}
@@ -388,17 +415,17 @@ export default function App() {
                   )}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {[
-                    { icon: ShieldCheck, title: t.secure, desc: 'SSL + WhatsApp' },
+                    { icon: ShieldCheck, title: t.secure, desc: 'TACTICAL PROTECTION' },
                     { icon: Truck, title: t.logistic, desc: t.fast },
-                    { icon: Package, title: t.sustainable, desc: 'Original Fit' }
+                    { icon: Package, title: t.sustainable, desc: 'ELITE SELECTION' }
                   ].map((f, i) => (
-                    <div key={i} className={`rounded-3xl border p-6 flex flex-col items-center text-center gap-3 ${cardClass}`}>
-                      <f.icon className="w-6 h-6 text-indigo-400" />
-                      <div>
-                        <p className="text-[10px] font-black uppercase tracking-[0.2em]">{f.title}</p>
-                        <p className="text-[9px] text-slate-500 font-bold uppercase mt-1">{f.desc}</p>
+                    <div key={i} className={`rounded-[2.5rem] border p-8 flex flex-col items-center text-center gap-4 transition-all duration-500 hover:-translate-y-2 ${cardClass}`}>
+                      <f.icon className="w-8 h-8 text-[#D4AF37]" />
+                      <div className="space-y-1">
+                        <p className="text-[11px] font-black uppercase tracking-[0.4em]">{f.title}</p>
+                        <p className="text-[10px] text-slate-500 font-bold uppercase">{f.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -406,22 +433,22 @@ export default function App() {
               </div>
 
               <div className="col-span-12 lg:col-span-4 h-full">
-                <div className={`rounded-[3rem] border p-10 h-full flex flex-col ${cardClass}`}>
-                   <h3 className="text-xl font-black uppercase tracking-widest mb-10 font-display italic">CHECKOUT <span className="text-indigo-500 font-light">EXHIBIT</span></h3>
+                <div className={`rounded-[4rem] border p-12 h-full flex flex-col ${cardClass}`}>
+                   <h3 className="text-2xl font-black uppercase tracking-[0.3em] mb-12 font-display italic text-center">CHECKOUT <span className="gold-text-gradient font-light">ELITE</span></h3>
                    
-                   <div className="space-y-4 mb-10 text-sm font-bold uppercase tracking-tight">
-                     <div className="flex justify-between items-center text-slate-500">
-                       <span className="text-[10px] italic">Subtotal</span>
+                   <div className="space-y-6 mb-12 text-[11px] font-black uppercase tracking-[0.2em]">
+                     <div className="flex justify-between items-center text-slate-500 italic">
+                       <span>SUBTOTAL GESTIÓN</span>
                        <span>${totalPrice.toFixed(2)}</span>
                      </div>
-                     <div className="flex justify-between items-center text-emerald-400">
-                       <span className="text-[10px] italic">Envío México</span>
-                       <span>$0.00</span>
+                     <div className="flex justify-between items-center text-[#22c55e] italic">
+                       <span>LOGÍSTICA MX PRO</span>
+                       <span>FREE</span>
                      </div>
-                     <div className="h-px bg-white/10 my-4" />
+                     <div className="h-px bg-white/5 my-6" />
                      <div className="flex justify-between items-end">
-                       <span className="text-[10px] font-black uppercase text-indigo-500 italic">{t.totalBill}</span>
-                       <span className="text-4xl font-black font-display tracking-tighter leading-none text-indigo-500 animate-pulse">
+                       <span className="text-[#D4AF37] italic tracking-[0.4em]">{t.totalBill}</span>
+                       <span className="text-5xl font-black font-display tracking-tighter leading-none gold-text-gradient animate-pulse">
                          ${totalPrice.toFixed(2)}
                        </span>
                      </div>
@@ -429,12 +456,12 @@ export default function App() {
 
                    <CheckoutForm cart={cart} totalPrice={totalPrice} lang={lang} t={t} />
                    
-                   <div className="mt-auto pt-8 border-t border-white/5 text-center space-y-4">
-                     <div className="flex items-center justify-center gap-2 text-emerald-400">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
-                        <span className="text-[9px] font-black uppercase tracking-widest">{t.online}</span>
+                   <div className="mt-auto pt-10 border-t border-white/5 text-center space-y-6">
+                     <div className="flex items-center justify-center gap-3 text-emerald-400">
+                        <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
+                        <span className="text-[11px] font-black uppercase tracking-[0.5em]">{t.online}</span>
                      </div>
-                     <p className="text-[8px] text-slate-500 font-black uppercase leading-relaxed tracking-wider">{t.disclaimer}</p>
+                     <p className="text-[9px] text-[#B0B0B0] font-bold uppercase leading-relaxed tracking-[0.2em]">{t.disclaimer}</p>
                    </div>
                 </div>
               </div>
@@ -443,7 +470,9 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <div className="fixed top-0 -translate-y-1/2 left-0 w-[60vw] h-[60vw] bg-indigo-500/5 blur-[150px] rounded-full pointer-events-none -z-10" />
+      {/* Luxury Decorative Background */}
+      <div className="fixed top-0 -translate-y-1/2 left-0 w-[50vw] h-[50vw] bg-[#D4AF37]/5 blur-[180px] rounded-full pointer-events-none -z-10" />
+      <div className="fixed bottom-0 translate-y-1/2 right-0 w-[40vw] h-[40vw] bg-[#5A1A1A]/5 blur-[150px] rounded-full pointer-events-none -z-10" />
     </div>
   );
 }
@@ -455,29 +484,31 @@ function CheckoutForm({ cart, totalPrice, lang, t }: { cart: CartItem[], totalPr
     e.preventDefault();
     if (cart.length === 0) return;
     
-    let message = `*NUEVO PEDIDO - AIKO'S SHOP*\n\n`;
-    message += `👤 *Client:* ${formData.name}\n`;
-    message += `📞 *Phone:* ${formData.phone}\n`;
-    message += `📍 *Dirección:* ${formData.address}\n\n`;
-    message += `🛒 *Inventory:*\n`;
+    let message = `*${t.orderMsg}*\n\n`;
+    message += `👤 *ATLETA/CLIENTE:* ${formData.name}\n`;
+    message += `📞 *WHATSAPP:* ${formData.phone}\n`;
+    message += `📍 *LOGÍSTICA:* ${formData.address}\n\n`;
+    message += `🏟️ *EQUIPAMIENTO SELECCIONADO:*\n`;
     
     cart.forEach(item => {
       message += `• ${item.quantity}x ${item.name[lang]} (${item.selectedSize}) - $${(item.price * item.quantity).toFixed(2)}\n`;
     });
     
-    message += `\n💰 *TOTAL: $${totalPrice.toFixed(2)} MXN*`;
+    message += `\n💰 *INVERSIÓN TOTAL: $${totalPrice.toFixed(2)} MXN*`;
     message += `\n\n🚚 _${t.shipping}_`;
     
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
+  const inputStyle = "w-full bg-[#0A0A0A] border border-white/5 h-20 px-8 rounded-[2rem] text-sm font-bold focus:ring-2 focus:ring-[#D4AF37] transition-all outline-none placeholder:text-slate-700 placeholder:italic placeholder:font-normal";
+
   return (
-    <form onSubmit={sendWhatsApp} className="space-y-4 flex-1 flex flex-col">
-      <input required type="text" placeholder={t.identityName} className="w-full bg-indigo-500/5 border border-indigo-500/10 h-16 px-6 rounded-3xl text-sm font-bold focus:ring-2 focus:ring-indigo-500 transition-all outline-none" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
-      <input required type="tel" placeholder={t.phone} className="w-full bg-indigo-500/5 border border-indigo-500/10 h-16 px-6 rounded-3xl text-sm font-bold focus:ring-2 focus:ring-indigo-500 transition-all outline-none" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value })} />
-      <textarea required placeholder={t.address} className="w-full bg-indigo-500/5 border border-indigo-500/10 p-6 rounded-[2rem] h-32 text-sm font-bold focus:ring-2 focus:ring-indigo-500 transition-all outline-none resize-none" value={formData.address} onChange={e => setFormData({ ...formData, address: e.target.value })} />
-      <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="submit" disabled={cart.length === 0} className="w-full h-20 rounded-[2.5rem] accent-gradient text-white font-black uppercase text-xs tracking-[0.2em] shadow-xl flex items-center justify-center gap-3 disabled:opacity-20 mt-6">
-        <Send className="w-5 h-5" /> {t.finalize}
+    <form onSubmit={sendWhatsApp} className="space-y-6 flex-1 flex flex-col pt-4">
+      <input required type="text" placeholder={t.identityName} className={inputStyle} value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
+      <input required type="tel" placeholder={t.phone} className={inputStyle} value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value })} />
+      <textarea required placeholder={t.address} className={`${inputStyle} h-40 p-8 resize-none`} value={formData.address} onChange={e => setFormData({ ...formData, address: e.target.value })} />
+      <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="submit" disabled={cart.length === 0} className="w-full h-24 rounded-[3rem] gold-fill text-[#0A0A0A] font-black uppercase text-sm tracking-[0.4em] shadow-[0_20px_50px_rgba(212,175,55,0.2)] flex items-center justify-center gap-4 disabled:opacity-20 mt-10">
+        <Send className="w-6 h-6" /> {t.finalize}
       </motion.button>
     </form>
   );

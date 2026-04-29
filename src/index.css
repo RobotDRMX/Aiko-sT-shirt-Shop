@@ -1,30 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", sans-serif;
-  --color-slate-950: #0f172a;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Raleway", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --gold-primary: #D4AF37;
+  --gold-dark: #A88C2C;
+  --gold-light: #F5D76E;
+  --bg-carbon: #121212;
+  --emerald: #0F3D2E;
+  --wine: #5A1A1A;
 }
 
 @layer base {
   body {
-    @apply antialiased text-slate-50 bg-[#0f172a];
+    @apply antialiased text-[#F5F5F5] bg-[#0A0A0A];
     font-feature-settings: 'ss01', 'ss02', 'cv01', 'cv11';
   }
 }
 
 @layer components {
   .bento-card {
-    @apply bg-slate-900/60 border border-white/5 rounded-[40px] backdrop-blur-xl transition-all duration-500 hover:border-red-900/40;
+    @apply bg-[#121212] border border-white/5 rounded-[40px] backdrop-blur-xl transition-all duration-500 hover:border-[#D4AF37]/40;
   }
   
   .accent-gradient {
-    background: linear-gradient(135deg, #8B0000 0%, #191970 50%, #FF1493 100%);
+    background: linear-gradient(135deg, #D4AF37 0%, #A88C2C 50%, #F5D76E 100%);
+  }
+
+  .gold-outline {
+    @apply border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-all;
+  }
+
+  .gold-fill {
+    @apply bg-[#D4AF37] text-[#0A0A0A] hover:bg-[#F5D76E] transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)];
+  }
+
+  .gold-text-gradient {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(135deg, #F5D76E 0%, #D4AF37 50%, #A88C2C 100%);
   }
 }
 
-/* Custom Scrollbar for dark theme */
+/* Custom Scrollbar for Luxury Dark Theme */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -34,10 +55,10 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(212, 175, 55, 0.2);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(212, 175, 55, 0.4);
 }
