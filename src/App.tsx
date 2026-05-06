@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  ShoppingCart, X, Plus, Minus, Send, Check, 
+import {
+  ShoppingCart, X, Plus, Minus, Send, Check,
   ChevronLeft, ChevronRight, Star, ArrowLeft,
   ShoppingBag, Package, Truck, ShieldCheck,
-  Globe, Sun, Moon, Info
+  Globe, Sun, Moon, Info,
+  Instagram, Facebook, MessageCircle, Mail, MapPin
 } from 'lucide-react';
 
 // --- Types ---
@@ -114,6 +115,7 @@ const SIZE_CHART = [
 ];
 
 const WHATSAPP_NUMBER = "+529624600652";
+const CONTACT_EMAIL = "sportivatotalmx@gmail.com";
 
 const I18N = {
   es: {
@@ -145,6 +147,9 @@ const I18N = {
     disclaimer: 'Gestión exclusiva vía WhatsApp. Entregas tácticas en todo México.',
     items: 'Unidades',
     orderMsg: 'NUEVA ORDEN DE EQUIPAMIENTO ELITE - SPORTIVA TOTAL MX',
+    contactInfo: 'Contacto',
+    social: 'Redes Sociales',
+    rights: 'Todos los derechos reservados.',
   },
   en: {
     catalog: 'Catalog',
@@ -175,6 +180,9 @@ const I18N = {
     disclaimer: 'Exclusive management via WhatsApp. Tactical deliveries across Mexico.',
     items: 'Units',
     orderMsg: 'NEW ELITE GEAR ORDER - SPORTIVA TOTAL MX',
+    contactInfo: 'Contact',
+    social: 'Social Media',
+    rights: 'All rights reserved.',
   }
 };
 
@@ -470,10 +478,100 @@ export default function App() {
         </AnimatePresence>
       </main>
 
+      <Footer lang={lang} theme={theme} />
+
       {/* Luxury Decorative Background */}
       <div className="fixed top-0 -translate-y-1/2 left-0 w-[50vw] h-[50vw] bg-[#D4AF37]/5 blur-[180px] rounded-full pointer-events-none -z-10" />
       <div className="fixed bottom-0 translate-y-1/2 right-0 w-[40vw] h-[40vw] bg-[#5A1A1A]/5 blur-[150px] rounded-full pointer-events-none -z-10" />
     </div>
+  );
+}
+
+function Footer({ lang, theme }: { lang: 'es' | 'en'; theme: 'dark' | 'light' }) {
+  const t = I18N[lang];
+  const cardBase = theme === 'dark'
+    ? 'bento-card'
+    : 'bento-card bg-white border-slate-200 shadow-sm';
+  const textMuted = theme === 'dark' ? 'text-[#B0B0B0]' : 'text-slate-500';
+  const textMain  = theme === 'dark' ? 'text-white'     : 'text-slate-900';
+  const divider   = theme === 'dark' ? 'border-white/5' : 'border-slate-100';
+  const socialBtn = theme === 'dark'
+    ? 'border-white/10 hover:border-[#D4AF37]/60'
+    : 'border-slate-200 hover:border-[#D4AF37]/60';
+
+  return (
+    <footer className="w-full px-4 pb-10 pt-2 max-w-7xl mx-auto">
+      <div className={`${cardBase} p-8 md:p-12`}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+          {/* Brand */}
+          <div className="space-y-3">
+            <p className={`text-[10px] font-black uppercase tracking-[0.4em] ${textMuted}`}>SPORTIVA</p>
+            <h2 className="text-3xl font-black font-display uppercase leading-none">
+              <span className="gold-text-gradient">TOTAL MX</span>
+            </h2>
+            <p className={`text-xs font-bold uppercase tracking-widest ${textMuted}`}>{t.heroSub}</p>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <p className={`text-[10px] font-black uppercase tracking-[0.4em] ${textMuted}`}>{t.contactInfo}</p>
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 group"
+            >
+              <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className={`text-xs font-bold ${textMain} group-hover:text-[#D4AF37] transition-colors`}>
+                {WHATSAPP_NUMBER}
+              </span>
+            </a>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center gap-3 group">
+              <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" />
+              <span className={`text-xs font-bold ${textMain} group-hover:text-[#D4AF37] transition-colors`}>
+                {CONTACT_EMAIL}
+              </span>
+            </a>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
+              <span className={`text-xs font-bold ${textMain}`}>México</span>
+            </div>
+          </div>
+
+          {/* Social */}
+          <div className="space-y-4">
+            <p className={`text-[10px] font-black uppercase tracking-[0.4em] ${textMuted}`}>{t.social}</p>
+            <div className="flex gap-4">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className={`w-10 h-10 rounded-2xl border ${socialBtn} flex items-center justify-center transition-all group`}
+              >
+                <Instagram className={`w-5 h-5 ${textMuted} group-hover:text-[#D4AF37] transition-colors`} />
+              </a>
+              <a
+                href="#"
+                aria-label="Facebook"
+                className={`w-10 h-10 rounded-2xl border ${socialBtn} flex items-center justify-center transition-all group`}
+              >
+                <Facebook className={`w-5 h-5 ${textMuted} group-hover:text-[#D4AF37] transition-colors`} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Legal */}
+        <div className={`mt-10 pt-6 border-t ${divider} flex flex-col md:flex-row items-center justify-between gap-3`}>
+          <p className={`text-[10px] font-bold uppercase tracking-[0.3em] ${textMuted}`}>
+            © {new Date().getFullYear()} Sportiva Total MX &middot; {t.rights}
+          </p>
+          <p className="text-[10px] font-black uppercase tracking-[0.3em] gold-text-gradient">
+            {t.heroSub}
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }
 
