@@ -233,7 +233,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <button onClick={() => setView('catalog')} className="flex items-center gap-4 group">
             <div className="w-12 h-12 gold-fill rounded-xl flex items-center justify-center shadow-lg transition-transform group-hover:scale-105 overflow-hidden">
-              <img src="/src/assets/logo.png" alt="Logo" className="w-full h-full object-cover" />
+              <img src="/src/assets/19080.png" alt="Logo" className="w-full h-full object-cover" />
             </div>
             <div className="text-left">
               <h1 className="text-lg font-black tracking-tighter uppercase font-display leading-none">
