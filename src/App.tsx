@@ -28,80 +28,110 @@ interface CartItem extends Product {
 const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: { es: 'Jersey México Local 2024', en: 'Mexico Home Jersey 2024' },
-    price: 85.00,
+    name: { es: 'Jersey Verde Larga Distancia', en: 'Green Long-Distance Jersey' },
+    price: 70.00,
     description: { 
-      es: 'Inspirada en el plumaje del águila. Tejido transpirable con tecnología de absorción para alto rendimiento.',
-      en: 'Inspired by eagle feathers. Breathable fabric with moisture-wicking technology for high performance.'
+      es: '¿Sabías que el gol más lejano es de 60 metros en un mundial? Diseño minimalista en tono verde oscuro con vivos blancos. Inspirado en los goles históricos de larga distancia.',
+      en: 'Did you know the longest goal is 60 meters in a World Cup? Minimalist design in dark green tones with white accents. Inspired by historic long-distance goals.'
     },
     images: [
-      'https://images.unsplash.com/photo-1627318042469-f83196ed8645?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop',
+      '/ImgCamisas/GolMasLejano60Metros.jpg',
     ]
   },
   {
     id: '2',
-    name: { es: 'Jersey Real Madrid Blanco Clásico', en: 'Real Madrid Classic White' },
-    price: 90.00,
+    name: { es: 'Jersey Japón Local', en: 'Japan Home Jersey' },
+    price: 85.00,
     description: { 
-      es: 'La elegancia del club más grande de Europa. Escudo bordado y detalles dorados premium.',
-      en: 'The elegance of Europe\'s greatest club. Embroidered crest and premium gold details.'
+      es: '¿Sabías que Japón es famoso por limpiar los estadios a pesar del resultado? Azulíndigo elegante con franjas blancas en los hombros. Un tributo a la cultura del respeto y la limpieza.',
+      en: 'Did you know Japan is famous for cleaning stadiums regardless of the result? Elegant indigo blue with white shoulder stripes. A tribute to the culture of respect and cleanliness.'
     },
     images: [
-      'https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?q=80&w=800&auto=format&fit=crop',
+      '/ImgCamisas/JaponFamosoPorLimpiarEstadios.jpg',
     ]
   },
   {
     id: '3',
-    name: { es: 'Jersey Barcelona Retro 90s', en: 'Barcelona 90s Retro Jersey' },
-    price: 75.00,
+    name: { es: 'Jersey Brasil Retro 1958', en: 'Brazil 1958 Retro Jersey' },
+    price: 90.00,
     description: { 
-      es: 'Un viaje a la época dorada del Dream Team. Diseño icónico y ajuste clásico.',
-      en: 'A trip to the Dream Team golden era. Iconic design and classic fit.'
+      es: '¿Sabías que este es el jugador más joven? Clásico amarillo vibrante con detalles verdes y el dorsal 8. El inicio de una leyenda adolescente.',
+      en: 'Did you know this is the youngest player? Classic vibrant yellow with green details and the number 8. The start of a teenage legend.'
     },
     images: [
-      'https://images.unsplash.com/photo-1628109312117-915000570cc9?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1621272036047-bb0f76bbc1ad?q=80&w=800&auto=format&fit=crop',
+      '/ImgCamisas/JugadorMasJoven.jpg',
     ]
   },
   {
     id: '4',
-    name: { es: 'Jersey Argentina 3 Estrellas', en: 'Argentina 3 Stars Jersey' },
-    price: 95.00,
+    name: { es: 'Jersey Liguilla 1950', en: '1950 Group Stage Jersey' },
+    price: 65.00,
     description: { 
-      es: 'La piel de los campeones del mundo. Con el parche oficial de la FIFA y las 3 estrellas bordadas.',
-      en: 'The skin of world champions. With official FIFA patch and 3 embroidered stars.'
+      es: '¿Sabías que el mundial de 1950 fue definido en una liguilla? Diseño vintage de algodón en tonos claros con cuello oscuro tipo polo. Pura nostalgia futbolera del siglo pasado.',
+      en: 'Did you know the 1950 World Cup was decided in a group stage? Vintage cotton design in light tones with a dark polo collar. Pure 20th-century football nostalgia.'
     },
     images: [
-      'https://images.unsplash.com/photo-1672322319409-9657f9202352?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1673891404104-e3ad97edac8b?q=80&w=800&auto=format&fit=crop',
+      '/ImgCamisas/Mundial1950DefinidoEnLiguilla.jpg',
     ]
   },
   {
     id: '5',
-    name: { es: 'Jersey Inter Miami Local (Messi)', en: 'Inter Miami Home Jersey (Messi)' },
-    price: 88.00,
+    name: { es: 'Jersey Goleada 1954', en: '1954 Goalfest Jersey' },
+    price: 75.00,
     description: { 
-      es: 'El color rosa que revoluciona el fútbol. Edición especial con personalización premium.',
-      en: 'The pink color revolutionizing football. Special edition with premium personalization.'
+      es: '¿Sabías que el partido con más goles es de Suiza vs Austria? Tonos oscuros con contrastes y acentos rojos. Un homenaje al partido con más anotaciones en la historia.',
+      en: 'Did you know the match with the most goals is Switzerland vs Austria? Dark tones with contrasts and red accents. A tribute to the highest-scoring match in history.'
     },
     images: [
-      'https://images.unsplash.com/photo-1706698656113-d144e5acafdd?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1706700010896-1849202a3a5f?q=80&w=800&auto=format&fit=crop',
+      '/ImgCamisas/PartidoConMasGolesSuizaVsAustria.jpg',
     ]
   },
   {
     id: '6',
-    name: { es: 'Jersey Italia Renaissance', en: 'Italy Renaissance Jersey' },
-    price: 82.00,
+    name: { es: 'Jersey Alemania Blanco (#10)', en: 'Germany White Jersey (#10)' },
+    price: 95.00,
     description: { 
-      es: 'Arte y fútbol se fusionan en este diseño único. Inspirado en la arquitectura clásica italiana.',
-      en: 'Art and football blend in this unique design. Inspired by classic Italian architecture.'
+      es: '¿Sabías que el portero con más mundiales es este? Blanco clásico con franjas negras en las mangas y el mítico apellido Matthäus en la espalda.',
+      en: 'Did you know this goalkeeper has played the most World Cups? Classic white with black sleeve stripes and the legendary Matthäus name on the back.'
     },
     images: [
-      'https://images.unsplash.com/photo-1624608351586-13e71239859f?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1614632537190-23e4141777db?q=80&w=800&auto=format&fit=crop',
+      '/ImgCamisas/PorteroConMasPartidosEnMundiales.jpg',
+    ]
+  },
+  {
+    id: '7',
+    name: { es: 'Jersey Uruguay Campeón 1930', en: 'Uruguay 1930 Champion Jersey' },
+    price: 80.00,
+    description: { 
+      es: '¿Sabías que el primer mundial fue ganado por Uruguay? Las históricas franjas verticales celestes y blancas que vieron nacer y coronarse al primer campeón del mundo.',
+      en: 'Did you know the first World Cup was won by Uruguay? The historic light blue and white vertical stripes that saw the birth and crowning of the first world champion.'
+    },
+    images: [
+      '/ImgCamisas/PrimerMundialGanadoPorUruguay.jpg',
+    ]
+  },
+  {
+    id: '8',
+    name: { es: 'Jersey México Debut Mundialista', en: 'Mexico World Cup Debut Jersey' },
+    price: 100.00,
+    description: { 
+      es: '¿Sabías que este mundialará con un México vs Sudáfrica? El uniforme que presenció el debut histórico de México en mundiales. Un azul tradición que marca el inicio de una tradición Tricolor.',
+      en: 'Did you know this World Cup will start with Mexico vs South Africa? The uniform that witnessed Mexico\'s historic World Cup debut. A traditional blue that marks the beginning of a Tricolor tradition.'
+    },
+    images: [
+      '/ImgCamisas/IniciaMexicoVsSudafrica.jpg',
+    ]
+  },
+  {
+    id: '9',
+    name: { es: 'Jersey Monterrey Histórico', en: 'Historic Monterrey Jersey' },
+    price: 100.00,
+    description: { 
+      es: '¿Sabías que en Monterrey se jugarán 4 partidos mundialistas? Celebrando los 4 mundialitos disputados en la Sultana del Norte. Un tributo a la pasión futbolera de Monterrey.',
+      en: 'Did you know Monterrey will host 4 World Cup matches? Celebrating the 4 World Cups held in the Sultan of the North. A tribute to the football passion of Monterrey.'
+    },
+    images: [
+      '/ImgCamisas/Monterrey4PartidosMundialistas.jpg',
     ]
   }
 ];
